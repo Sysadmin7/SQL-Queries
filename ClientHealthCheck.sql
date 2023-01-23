@@ -27,3 +27,4 @@ left join v_CH_EvalResults eval on cs.ResourceID = eval.ResourceID
 where cs.ClientStateDescription in ('Active/Fail','Active/Unknown')
 and DATEDIFF(day,sys.Creation_Date0,cs.LastActiveTime) > 7
 Order by ClientStateDescription,ComputerName
+ 
