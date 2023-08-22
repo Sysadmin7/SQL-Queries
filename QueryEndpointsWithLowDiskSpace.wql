@@ -1,0 +1,7 @@
+SELECT 
+    SMS_R_System.Name, 
+    SMS_G_System_LOGICAL_DISK.DeviceID, 
+    SMS_G_System_LOGICAL_DISK.FreeSpace 
+FROM SMS_R_System 
+JOIN SMS_G_System_LOGICAL_DISK ON SMS_R_System.ResourceID = SMS_G_System_LOGICAL_DISK.ResourceID 
+WHERE SMS_G_System_LOGICAL_DISK.FreeSpace < 3000
